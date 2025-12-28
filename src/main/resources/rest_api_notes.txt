@@ -1,0 +1,5 @@
+ Response headers—Short pieces of data in the response (usually not more than a
+few words long)
+ The response body—A larger amount of data the backend needs to send in the
+response
+ The response status—A short representation of the request’s result
