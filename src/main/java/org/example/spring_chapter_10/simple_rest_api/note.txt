@@ -1,1 +1,4 @@
 this "Hello Controller" in simple_rest_api
+used "Controller" + "ResponseBody" to perform
+as "RestController" (no view will be rendered or
+informed by dispatcher servlet)
