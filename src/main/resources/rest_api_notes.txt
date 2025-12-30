@@ -3,3 +3,11 @@ few words long)
  The response body—A larger amount of data the backend needs to send in the
 response
  The response status—A short representation of the request’s result
+
+
+@RestControllerAdvice
+Is basically @ControllerAdvice + @ResponseBody.
+This means:
+It applies to all controllers by default (both @Controller and @RestController).
+All methods inside it automatically return JSON/XML (no need to add @ResponseBody).
+Primarily used for global exception handling in REST APIs.
