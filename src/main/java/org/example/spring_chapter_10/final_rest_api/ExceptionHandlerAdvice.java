@@ -14,4 +14,13 @@ public class ExceptionHandlerAdvice {
                 .badRequest()
                 .body(errorDetails);
     }
+
+    @ExceptionHandler(InvalidPaymentAmountHandler.class)
+    public ResponseEntity<ErrorDetails> invalidMoney(InvalidPaymentAmountHandler ex){
+        ErrorDetails errorDetails = new ErrorDetails();
+        errorDetails.setMessage(ex.getMessage());
+        return ResponseEntity
+                .badRequest()
+                .body(errorDetails);
+    }
 }

@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class PaymentController {
 
-
     private final PaymentService paymentService;
 
     public PaymentController(PaymentService paymentService) {
@@ -24,7 +23,8 @@ public class PaymentController {
     public ResponseEntity<PaymentDetails> gonnaPay(@RequestBody PaymentDetails paymentDetails) {
        // paymentDetails.getAmount(); // request body's value retrieved
         if(paymentDetails.getAmount() <= 0){
-            throw new PaymentExceptionHandler();
+            //throw new InvalidPaymentAmountHandler("Invalid payment amount");
+            throw new InvalidPaymentAmountHandler();
         }
         return  ResponseEntity
                 .status(HttpStatus.ACCEPTED)
